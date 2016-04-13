@@ -1,4 +1,6 @@
+require_relative './fake_console_writer'
 require_relative './echo_server'
+
 describe EchoServer do
 
   it "should print welcome message to the output" do
