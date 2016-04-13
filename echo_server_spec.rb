@@ -1,3 +1,4 @@
+require_relative './echo_server'
 describe EchoServer do
 
   it "should print welcome message to the output" do
