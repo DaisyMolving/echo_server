@@ -9,7 +9,7 @@ describe EchoServer do
 	 writer = FakeWriter.new
 	 reader = FakeReader.new
 	 server = EchoServer.new(reader, writer)
-	 server.start
+	 server.welcome
 	 expect(writer.last_message_printed).to eq @welcome_message
   end
 
@@ -18,7 +18,7 @@ describe EchoServer do
 	 writer = FakeWriter.new
 	 reader = FakeReader.new
 	 server = EchoServer.new(reader, writer)
-	 server.start
+	 server.read_input
 	 expect(reader.last_input).to eq user_input
   end
 
@@ -27,7 +27,7 @@ describe EchoServer do
 	 writer = FakeWriter.new
 	 reader = FakeReader.new
 	 server = EchoServer.new(reader, writer)
-	 server.start
+	 server.echo_to_user
 	 expect(writer.last_message_printed).to eq user_input
   end
 end

@@ -8,6 +8,10 @@ class FakeWriter
 	 @output = message
   end
 
+  def repeat(user_input)
+	 @output = user_input
+  end
+
   def last_message_printed
 	 @output
   end
