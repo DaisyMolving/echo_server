@@ -10,4 +10,13 @@ describe EchoServer do
 	 server.start
 	 expect(writer.last_message_printed).to eq @welcome_message
   end
+
+  it 'should read user input' do
+	 @user_input = "echo!"
+	 writer = FakeWriter.new
+	 reader = FakeReader.new
+	 server = EchoServer.new(reader, writer)
+	 server.start
+	 expect(reader.last_input).to eq @user_input
+  end
 end
